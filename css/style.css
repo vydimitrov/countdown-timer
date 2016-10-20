@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body, html {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+  font-family: Sans-serif, Verdana;
+  font-weight: normal;
+  font-style: normal;
+  overflow-x: hidden; }
+
+.section-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #adadad; }
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px; }
+  .clock svg {
+    width: 100%;
+    height: 100%; }
+    .clock svg path {
+      stroke-width: 12px;
+      fill: #fff;
+      stroke: #d9d9d9; }
+      .clock svg path.time-out {
+        fill: none;
+        stroke: #5e7f38; }
+
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #4f4f4f; }
+  .content .seconds {
+    font-size: 42px;
+    color: #5e7f38;
+    padding-right: 7px; }

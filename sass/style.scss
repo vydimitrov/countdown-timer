@@ -1,0 +1,74 @@
+
+$svg-size: 180px;
+$color-1: rgb(94,127,56);
+$color-2: rgb(242,118,54);
+$color-3: rgb(139,32,40);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body, html {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+  font-family: Sans-serif, Verdana; 
+  font-weight: normal;
+  font-style: normal; 
+  overflow-x: hidden;
+}
+
+.section-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #adadad;
+}
+
+.clock{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);  
+  width: $svg-size;
+  height: $svg-size;
+
+  svg{
+    width: 100%;
+    height: 100%;
+
+    path{
+      stroke-width: 12px;
+      fill: #fff;
+      stroke: rgb(217,217,217);
+
+      &.time-out{
+        fill: none;
+        stroke: $color-1;
+      }
+    }
+  }
+}
+
+.content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(79,79,79);
+
+  .seconds{
+    font-size: 42px;
+    color: $color-1;
+    padding-right: 7px;
+  }
+}
+
